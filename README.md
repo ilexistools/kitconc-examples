@@ -75,61 +75,36 @@ Adding a corpus
 -------------
 ```python
 from kitconc.kit_corpus import Corpus 
-
-# create a corpus
-# * 'workspace' is the folder path to store the corpus data
-# * 'job_ads' is the corpus name
-corpus = Corpus('workspace','job_ads', language='english')
-
-# add texts
-# * 'JOB_ADS' is the folder path for the raw corpus (.txt files)  
-corpus.add_texts('JOB_ADS',show_progress=True)
+# reference to the corpus
+corpus = Corpus('kitconc-examples/workspace','ads','english')
+# add texts from source folder
+corpus.add_texts('kitconc-examples/ads',show_progress=True)
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/corpus.png'>See results...</a>
 
 Creating a wordlist 
 -------------
 ```python
-from kitconc.kit_corpus import Corpus
-
-# reference to corpus 
-corpus = Corpus('workspace','job_ads')
-
-# make wordlist 
-wordlist = corpus.wordlist()
-
-# print the top 25 most frequent words
-print(wordlist.df.head(25))
-
-# save as Excel
-# * corpus.output_path is a default folder
-# * inside the corpus folder (your_corpus/output/)
-wordlist.save_excel(corpus.output_path + 'wordlist.xlsx')
+from kitconc.kit_corpus import Corpus 
+# reference to the corpus
+corpus = Corpus('kitconc-examples/workspace','ads','english')
+# make wordlist
+wordlist = corpus.wordlist(show_progress=True)
+# print the top 10 
+print(wordlist.df.head(10))
+# save Excel file
+wordlist.save_excel(corpus.output_path + 'wordlist.xlsx') 
 ```
 <a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/wordlist.png'>See results...</a>
 
 Extracting keywords 
 -------------
 ```python
-from kitconc.kit_corpus import Corpus
-
-# reference to corpus 
-corpus = Corpus('workspace','job_ads')
-
-# make wordlist
-wordlist = corpus.wordlist()
-
-# make keywords (Log-likelihood is the default measure)
-keywords = corpus.keywords(wordlist)
-
-# for chi-square measure, use:
-# keywords = corpus.keywords(wordlist, measure = corpus.CHI_SQUARE)
-
-# print the top 25 keywords
-print(keywords.df.head(25))
-
-# save as Excel
-keywords.save_excel(corpus.output_path + 'keywords.xlsx') 
+from kitconc.kit_corpus import Corpus 
+corpus = Corpus('kitconc-examples/workspace','ads','english')
+wordlist = corpus.wordlist(show_progress=True)
+keywords = corpus.keywords(wordlist,show_progress=True)
+print(keywords.df.head(10))
+keywords.save_excel(corpus.output_path + 'keywords.xlsx')
 ```
 <a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/keywords.png'>See results...</a>
 
