@@ -201,6 +201,7 @@ collocations.save_excel(corpus.output_path+'collocations.xlsx')
 collocations.plot_colldist('strong')
 ```
 <a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img10.jpg'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img11.jpg'>See plot...</a>
 
 Ploting collocates
 -------------
@@ -213,5 +214,5 @@ collocates.save_excel(corpus.output_path + 'collocates.xlsx')
 # plot collocates
 collocates.plot_collgraph(node='skills')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img11.jpg'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img12.jpg'>See results...</a>
 
