@@ -214,5 +214,5 @@ collocates.save_excel(corpus.output_path + 'collocates.xlsx')
 # plot collocates
 collocates.plot_collgraph(node='skills')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img12.jpg'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img12.jpg'>View plot...</a>
 
