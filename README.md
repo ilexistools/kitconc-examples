@@ -94,7 +94,7 @@ print(wordlist.df.head(10))
 # save Excel file
 wordlist.save_excel(corpus.output_path + 'wordlist.xlsx') 
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/wordlist.png'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img01.jpg'>See results...</a>
 
 Extracting keywords 
 -------------
@@ -106,7 +106,7 @@ keywords = corpus.keywords(wordlist,show_progress=True)
 print(keywords.df.head(10))
 keywords.save_excel(corpus.output_path + 'keywords.xlsx')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/keywords.png'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img02.jpg'>See results...</a>
 
 Creating concordance lines - KWIC 
 -------------
@@ -118,7 +118,7 @@ kwic.sort('R1','R2','R3')
 print(kwic.df.head(10))
 kwic.save_excel(corpus.output_path + 'kwic.xlsx',highlight='R1 R2 R3')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/concordance.png'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img03.jpg'>See results...</a>
 
 Creating concordance lines - sentences 
 -------------
@@ -129,7 +129,7 @@ concordances = corpus.concordance('experience',show_progress=True)
 print(concordances.df.head(10))
 concordances.save_excel(corpus.output_path + 'concordances.xlsx',highlight='R1 R2 R3')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/concordance.png'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img04.jpg'>See results...</a>
 
 Finding collocates 
 -------------
@@ -140,7 +140,7 @@ collocates = corpus.collocates('experience',left_span=2,right_span=2,coll_pos='I
 print(collocates.df.head(10))
 collocates.save_excel(corpus.output_path + 'collocates.xlsx')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/collocates.png'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img05.jpg'>See results...</a>
 
 Making clusters 
 -------------
@@ -151,7 +151,7 @@ clusters = corpus.clusters('experience',size=3,show_progress=True)
 print(clusters.df.head(10))
 clusters.save_excel(corpus.output_path + 'clusters.xlsx')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/clusters.png'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img06.jpg'>See results...</a>
 
 Making ngrams 
 -------------
@@ -162,7 +162,7 @@ ngrams = corpus.ngrams(size=3,pos='NN IN NN',show_progress=True)
 print(ngrams.df.head(10))
 ngrams.save_excel(corpus.output_path + 'ngrams.xlsx')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/clusters.png'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img07.jpg'>See results...</a>
 
 Creating dispersion plots 
 -------------
@@ -173,7 +173,7 @@ dispersion = corpus.dispersion('salary')
 print(dispersion.df.head(10))
 dispersion.save_excel(corpus.output_path + 'dispersion.xlsx')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/dispersion.png'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img08.jpg'>See results...</a>
 
 Creating keywords dispersion plots 
 -------------
@@ -186,7 +186,7 @@ keywords_dispersion = corpus.keywords_dispersion(keywords,show_progress=True)
 print(keywords_dispersion.df.head(10))
 keywords_dispersion.save_excel(corpus.output_path+'keywords_dispersion.xlsx')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/dispersion_keywords.png'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img09.jpg'>See results...</a>
 
 Finding collocations
 -------------
@@ -200,7 +200,7 @@ collocations.save_excel(corpus.output_path+'collocations.xlsx')
 # plot a collocate distribution
 collocations.plot_colldist('strong')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/collocates.png'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img10.jpg'>See results...</a>
 
 Ploting collocates
 -------------
@@ -213,5 +213,5 @@ collocates.save_excel(corpus.output_path + 'collocates.xlsx')
 # plot collocates
 collocates.plot_collgraph(node='skills')
 ```
-<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/collocates.png'>See results...</a>
+<a href='https://raw.githubusercontent.com/ilexistools/kitconc-examples/master/images/img11.jpg'>See results...</a>
 
