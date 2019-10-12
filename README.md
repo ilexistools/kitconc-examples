@@ -63,6 +63,14 @@ See how easy it is to use Kitconc:
 
 (<a href='https://github.com/ilexistools/kitconc-examples'>Download examples...</a>)
 
+Dowloading examples
+-------------
+```python
+from kitconc.core import Examples 
+
+Examples().download()
+```
+
 Adding a corpus
 -------------
 ```python
